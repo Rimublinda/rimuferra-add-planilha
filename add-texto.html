@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rimuferra - um lugar onde tem um monte de ferramentas para o dia a dia</title>
+    <!-- link -->
+    <link rel="stylesheet" href="./src/css/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body class="d-flex">
+    <header style="width: 20vw;">
+        <nav class="nav bg-dark navbar-dark d-flex flex-column " style="height: 100vh;">
+            <li class="nav-item">
+                <h4 class="title text-light text-center mt-3">Rimuferra</h4>
+                <hr class="text-light">
+            </li>
+            <li>
+                <button class="btn-category dropdown-toggle text-light d-flex align-items-center justify-content-center"
+                    onclick="OpenTheOffMenu('planilha')">planilha:</button>
+                <ul class="menu-category" id="planilha">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Adicionar texto na planilha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">importar a lista na planilha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pesquisar na lista</a>
+                    </li>
+                </ul>
+            </li>
+        </nav>
+    </header>
+    <main class="container bg-backgroud d-flex align-items-center justify-content-center">
+        <div class="bg-form p-3">
+            <h3 class="h1 text-light">Adicionando texto na sua planilha:</h3>
+            <div class="alert-situation hidde"></div>
+            <form id="form-add">
+                <div class="d-flex flex-column-reverse mb-4">
+                    <input type="text" id="title" class="form-control">
+                    <label for="title" class="text-light">Titulo:</label>
+                </div>
+                <div class="d-flex flex-row-reverse justify-content-center mb-4" style="gap: 10px;">
+                    <input type="checkbox" id="check-title" class="form-check-input">
+                    <label for="check-title" class="fs-4 form-check-label text-light">se já tem titulo:</label>
+                </div>
+                <div class="d-flex flex-column-reverse mb-4">
+                    <input type="text" id="link-api" class="form-control" required>
+                    <label for="link-api" class="text-light">Link que se cadastrou a api:</label>
+                </div>
+                <div class="d-flex flex-column-reverse mb-4">
+                    <select id="type-add" class="form-select">
+                        <option selected hidden>Qual seu formato de lista:</option>
+                        <option value="single">Um elemento</option>
+                        <option value="multiple">varios elementos</option>
+                    </select>
+                    <label for="title" class="text-light">Seu formato de lista:</label>
+                </div>
+                <div class="d-flex flex-column-reverse mb-4">
+                    <textarea id="text" class="form-control" required>
+                        -ola
+                        -chora mais
+                        -ola
+                        --fins pikas os meios
+                    </textarea>
+                    <label for="text" class="text-light">Seu texto:</label>
+                </div>
+                <div class="d-flex flex-column-reverse mb-4">
+                    <button type="submit" class="btn-3d text-light">Adiconar texto</button>
+                </div>
+            </form>
+            <section>
+                <h4 class="h1 text-light">algumas opções:</h4>
+                <div class="d-flex" style="gap: 10px;">
+                    <button class="btn bg-info">Redirecionar para a planilha</button>
+                    <button class="btn bg-info">adicionar pre-configurações</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="./src/js/script.js"></script>
+    <script src="./src/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
